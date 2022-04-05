@@ -66,7 +66,7 @@ public class NoteListAdapter extends PagingDataAdapter<Note, NoteListAdapter.MyV
         }
     };
 
-    interface OnItemClickListener {
+    public interface OnItemClickListener {
         void onItemClicked(Note note);
     }
 }
