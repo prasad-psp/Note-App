@@ -4,8 +4,11 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:id="@+id/rootView">
+    android:padding="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/rootView"
+    android:background="@color/silver">
 
     <TextView
         android:id="@+id/txtTitle"
