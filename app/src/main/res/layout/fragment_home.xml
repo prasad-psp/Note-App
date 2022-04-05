@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Note app"
+            android:text="@string/note_app"
             android:textColor="@color/purple_500"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -30,7 +30,7 @@
             android:layout_marginTop="5dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Note List" />
+            android:text="@string/note_list" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
