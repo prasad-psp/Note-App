@@ -3,6 +3,7 @@ package com.psp.note_app.model;
 import static com.psp.note_app.utils.Constants.TABLE_NAME;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = TABLE_NAME)
@@ -30,6 +31,9 @@ public class Note {
         this.date = date;
         this.time = time;
     }
+
+    @Ignore
+    public Note() {}
 
     public int getId() {
         return id;
