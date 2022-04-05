@@ -2,6 +2,7 @@ package com.psp.note_app.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -40,7 +41,7 @@ public class NoteListAdapter extends PagingDataAdapter<Note, NoteListAdapter.MyV
 
         holder.binding.rootView.setOnClickListener(view -> {
             if(note != null) {
-                itemClickListener.onItemClicked(note);
+                itemClickListener.onItemClicked(view, note);
             }
         });
     }
@@ -67,6 +68,6 @@ public class NoteListAdapter extends PagingDataAdapter<Note, NoteListAdapter.MyV
     };
 
     public interface OnItemClickListener {
-        void onItemClicked(Note note);
+        void onItemClicked(View view, Note note);
     }
 }
