@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.HomeFragment">
 
 
@@ -33,20 +33,25 @@
             android:text="Note List" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            tools:listitem="@layout/item_note_recyclerview"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFloating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/icon_plus" />
+        android:src="@drawable/icon_plus"
+        android:contentDescription="@string/todo" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
