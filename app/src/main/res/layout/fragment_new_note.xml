@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.NewNoteFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/app_background">
 
     <TextView
         android:id="@+id/textView"
@@ -14,7 +15,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/note_app"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/Galliano"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -25,6 +26,7 @@
         android:layout_marginTop="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/Prelude"
         android:text="@string/create_note" />
 
     <LinearLayout
@@ -38,12 +40,14 @@
             android:layout_height="wrap_content"
             android:text="@string/title"
             android:layout_marginTop="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/whiteSmoke"/>
 
         <EditText
             android:id="@+id/edtTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteSmoke"
+            android:backgroundTint="@color/mountain_mist"/>
 
     </LinearLayout>
 
@@ -59,12 +63,14 @@
             android:layout_height="wrap_content"
             android:text="@string/description"
             android:layout_marginTop="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/whiteSmoke"/>
 
         <EditText
             android:id="@+id/edtDesc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteSmoke"
+            android:backgroundTint="@color/mountain_mist"/>
 
     </LinearLayout>
 

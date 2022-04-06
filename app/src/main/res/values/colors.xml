@@ -8,4 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="silver">#eeeeee</color>
+    <color name="whiteSmoke">#F5F5F5</color>
+    <color name="app_background">#363636</color>
+    <color name="light_blue">#008EFF</color>
+    <color name="mountain_mist">#909395</color>
+    <color name="iridium">#3D3D3D</color>
+    <color name="Prelude">#D1C4E9</color>
+    <color name="Carnation">#F53F52</color>
+    <color name="Galliano">#E6AF0D</color>
+    <color name="Danube">#7AA1D2</color>
 </resources>

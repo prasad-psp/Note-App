@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.HomeFragment">
+    tools:context=".view.HomeFragment"
+    android:background="@color/app_background">
 
 
     <LinearLayout
@@ -19,7 +20,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:text="@string/note_app"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/Galliano"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -30,6 +31,7 @@
             android:layout_marginTop="5dp"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/Prelude"
             android:text="@string/note_list" />
 
         <androidx.recyclerview.widget.RecyclerView
