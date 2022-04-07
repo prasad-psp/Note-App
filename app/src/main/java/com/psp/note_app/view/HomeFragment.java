@@ -75,4 +75,9 @@ public class HomeFragment extends Fragment implements NoteListAdapter.OnItemClic
         bundle.putString(DESC_KEY, note.getDesc());
         Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_newNoteFragment,bundle);
     }
+
+    @Override
+    public void onItemRemove(View view, int id) {
+        viewModel.removeNote(id);
+    }
 }

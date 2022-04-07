@@ -41,4 +41,8 @@ public class HomeFragViewModel extends ViewModel {
     public LiveData<PagingData<Note>> getNotesObserver() {
         return notesLiveData;
     }
+
+    public void removeNote(int id) {
+        repo.removeNote(id);
+    }
 }

@@ -18,4 +18,8 @@ public class HomeFragRepo {
     public PagingSource<Integer, Note> getNotes() {
         return NoteDatabase.getInstance(context).noteDao().getNotes();
     }
+
+    public void removeNote(int id) {
+        new Thread(() -> NoteDatabase.getInstance(context).noteDao().deleteNote(id)).start();
+    }
 }

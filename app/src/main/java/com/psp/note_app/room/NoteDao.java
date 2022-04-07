@@ -18,4 +18,7 @@ public interface NoteDao {
 
     @Query("SELECT * FROM "+TABLE_NAME+" ORDER BY id DESC")
     PagingSource<Integer, Note> getNotes();
+
+    @Query("DELETE FROM "+TABLE_NAME+" WHERE id = :id")
+    void deleteNote(int id);
 }

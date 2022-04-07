@@ -44,6 +44,12 @@ public class NoteListAdapter extends PagingDataAdapter<Note, NoteListAdapter.MyV
                 itemClickListener.onItemClicked(view, note);
             }
         });
+
+        holder.binding.imgRemove.setOnClickListener(view -> {
+            if(note != null) {
+                itemClickListener.onItemRemove(view, note.getId());
+            }
+        });
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -69,5 +75,6 @@ public class NoteListAdapter extends PagingDataAdapter<Note, NoteListAdapter.MyV
 
     public interface OnItemClickListener {
         void onItemClicked(View view, Note note);
+        void onItemRemove(View view, int id);
     }
 }
