@@ -2,6 +2,7 @@
 Android Note App using MVVM, Room, Paging, Livedata, Navigation, RecyclerView, ViewBinding.
 
 - This application is made using **MVVM** architecture.
+- Save, Read & Delete Notes.
 - Tools/Technologies used: **Android studio, MVVM, Room, Livedata, Paging, Navigation, RecyclerView, ViewBinding**.
 
 
@@ -11,7 +12,9 @@ Android Note App using MVVM, Room, Paging, Livedata, Navigation, RecyclerView, V
 
 > 1
 > 
-![SS1](https://user-images.githubusercontent.com/88334469/162016400-21f0a2de-7ff3-48bf-852a-ce24bc96f44a.jpeg)
+![ss1](https://user-images.githubusercontent.com/88334469/162220921-7dd19e3d-c733-4728-ab3d-ac29b3030f29.jpeg)
+
+
 
 
 &nbsp;
