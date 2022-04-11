@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.psp.note_app.databinding.FragmentNewNoteBinding;
+import com.psp.note_app.viewmodel.AppViewModelFactory;
 import com.psp.note_app.viewmodel.NewNoteFragViewModel;
 
 
@@ -27,8 +28,7 @@ public class NewNoteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentNewNoteBinding.inflate(inflater,container,false);
-        viewModel = new ViewModelProvider(this).get(NewNoteFragViewModel.class);
-        viewModel.init(this.requireContext());
+        viewModel = new ViewModelProvider(this, new AppViewModelFactory(this.requireContext())).get(NewNoteFragViewModel.class);
 
         return binding.getRoot();
     }

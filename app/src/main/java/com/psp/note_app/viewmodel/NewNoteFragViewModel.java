@@ -16,7 +16,7 @@ import com.psp.note_app.utils.DateUtils;
 
 public class NewNoteFragViewModel extends ViewModel {
 
-    private NewNoteFragRepo repo; // Repo object
+    private final NewNoteFragRepo repo; // Repo object
 
     private int id = 0;
     private final MutableLiveData<String> title = new MutableLiveData<>();
@@ -24,7 +24,7 @@ public class NewNoteFragViewModel extends ViewModel {
 
     private boolean isAlreadyRun = false;
 
-    public void init(Context context) {
+    public NewNoteFragViewModel(Context context) {
         // init repo
         repo = new NewNoteFragRepo(context);
     }
