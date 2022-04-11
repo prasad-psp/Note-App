@@ -17,12 +17,12 @@ import androidx.paging.PagingData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.psp.note_app.R;
 import com.psp.note_app.adapter.NoteListAdapter;
 import com.psp.note_app.databinding.FragmentHomeBinding;
 import com.psp.note_app.model.Note;
+import com.psp.note_app.viewmodel.AppViewModelFactory;
 import com.psp.note_app.viewmodel.HomeFragViewModel;
 
 
@@ -40,8 +40,7 @@ public class HomeFragment extends Fragment implements NoteListAdapter.OnItemClic
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false);
-        viewModel = new ViewModelProvider(this).get(HomeFragViewModel.class);
-        viewModel.init(this.requireContext(), this);
+        viewModel = new ViewModelProvider(this, new AppViewModelFactory(this.requireContext(), this)).get(HomeFragViewModel.class);
         adapter = new NoteListAdapter(this);
         return binding.getRoot();
     }

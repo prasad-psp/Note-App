@@ -27,16 +27,15 @@ public class HomeFragViewModel extends ViewModel {
 
     private HomeFragRepo repo; // Repo object
 
-    public void init(Context context, LifecycleOwner lifecycleOwner) {
+    public HomeFragViewModel(Context context, LifecycleOwner lifecycleOwner) {
         // init repo
         repo = new HomeFragRepo(context);
         // init paging livedata
         PagingLiveData.cachedIn(
                 PagingLiveData.getLiveData(new Pager<>(pagingConfig, () -> repo.getNotes())),
-                        lifecycleOwner.getLifecycle()
+                lifecycleOwner.getLifecycle()
         ).observe(lifecycleOwner, notesLiveData::setValue);
     }
-
 
     public LiveData<PagingData<Note>> getNotesObserver() {
         return notesLiveData;
