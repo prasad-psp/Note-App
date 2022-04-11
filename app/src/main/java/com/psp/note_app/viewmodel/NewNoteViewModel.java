@@ -14,7 +14,7 @@ import com.psp.note_app.model.Note;
 import com.psp.note_app.repo.NewNoteFragRepo;
 import com.psp.note_app.utils.DateUtils;
 
-public class NewNoteFragViewModel extends ViewModel {
+public class NewNoteViewModel extends ViewModel {
 
     private final NewNoteFragRepo repo; // Repo object
 
@@ -24,7 +24,7 @@ public class NewNoteFragViewModel extends ViewModel {
 
     private boolean isAlreadyRun = false;
 
-    public NewNoteFragViewModel(Context context) {
+    public NewNoteViewModel(Context context) {
         // init repo
         repo = new NewNoteFragRepo(context);
     }

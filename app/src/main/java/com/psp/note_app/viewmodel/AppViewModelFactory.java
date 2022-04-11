@@ -33,9 +33,9 @@ public class AppViewModelFactory implements ViewModelProvider.Factory {
             HomeFragViewModel homeFragViewModel = new HomeFragViewModel(context,lifecycleOwner);
             return (T) homeFragViewModel;
         }
-        else if(modelClass == NewNoteFragViewModel.class) {
-            NewNoteFragViewModel newNoteFragViewModel = new NewNoteFragViewModel(context);
-            return (T) newNoteFragViewModel;
+        else if(modelClass == NewNoteViewModel.class) {
+            NewNoteViewModel newNoteViewModel = new NewNoteViewModel(context);
+            return (T) newNoteViewModel;
         }
         else {
             return null;
