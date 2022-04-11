@@ -23,14 +23,14 @@ import com.psp.note_app.adapter.NoteListAdapter;
 import com.psp.note_app.databinding.FragmentHomeBinding;
 import com.psp.note_app.model.Note;
 import com.psp.note_app.viewmodel.AppViewModelFactory;
-import com.psp.note_app.viewmodel.HomeFragViewModel;
+import com.psp.note_app.viewmodel.HomeViewModel;
 
 
 public class HomeFragment extends Fragment implements NoteListAdapter.OnItemClickListener {
 
     private FragmentHomeBinding binding;
 
-    private HomeFragViewModel viewModel;
+    private HomeViewModel viewModel;
 
     private NoteListAdapter adapter;
 
@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment implements NoteListAdapter.OnItemClic
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false);
-        viewModel = new ViewModelProvider(this, new AppViewModelFactory(this.requireContext(), this)).get(HomeFragViewModel.class);
+        viewModel = new ViewModelProvider(this, new AppViewModelFactory(this.requireContext(), this)).get(HomeViewModel.class);
         adapter = new NoteListAdapter(this);
         return binding.getRoot();
     }

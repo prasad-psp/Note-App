@@ -14,7 +14,7 @@ import androidx.paging.PagingLiveData;
 import com.psp.note_app.model.Note;
 import com.psp.note_app.repo.HomeFragRepo;
 
-public class HomeFragViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel {
 
     private final MutableLiveData<PagingData<Note>> notesLiveData = new MutableLiveData<>();
 
@@ -27,7 +27,7 @@ public class HomeFragViewModel extends ViewModel {
 
     private HomeFragRepo repo; // Repo object
 
-    public HomeFragViewModel(Context context, LifecycleOwner lifecycleOwner) {
+    public HomeViewModel(Context context, LifecycleOwner lifecycleOwner) {
         // init repo
         repo = new HomeFragRepo(context);
         // init paging livedata
