@@ -9,11 +9,11 @@ import com.psp.note_app.repo.MainRepo;
 
 public class MainViewModel extends ViewModel {
 
-    private MainRepo repo;
+    private final MainRepo repo;
 
     private final MutableLiveData<Boolean> showNotification = new MutableLiveData<>();
 
-    public void init(Context context) {
+    public MainViewModel(Context context) {
         repo = new MainRepo(context);
     }
 

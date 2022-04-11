@@ -13,6 +13,7 @@ import android.os.Bundle;
 
 import com.psp.note_app.R;
 import com.psp.note_app.viewmodel.MainViewModel;
+import com.psp.note_app.viewmodel.AppViewModelFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        MainViewModel viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        viewModel.init(this);
+        MainViewModel viewModel = new ViewModelProvider(this, new AppViewModelFactory(this)).get(MainViewModel.class);
 
         viewModel.getShowNotificationObserver().observe(this, new Observer<Boolean>() {
             @Override
